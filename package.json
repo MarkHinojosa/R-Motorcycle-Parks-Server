@@ -4,7 +4,7 @@
   "description": "server for Motorcycyle Parks",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [
     "node"

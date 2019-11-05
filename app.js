@@ -25,7 +25,7 @@ if (process.env.PORT) {
 }
 
 if (process.env.DATABASE_URL) {
-  console.log("Configured DATABASE_URL from ENV file");
+  console.log("**Configured DATABASE_URL from ENV file");
   DATABASE_URL = process.env.DATABASE_URL;
 } else {
   console.log("DATABASE_URL not found, missing env?");

@@ -24,9 +24,12 @@ if (process.env.PORT) {
   port = 3000;
 }
 
-process.env.DATABASE_URL
-  ? (DATABASE_URL = process.env.DATABASE_URL)
-  : console.log("DATABASE_URL not found, missing env?");
+if (process.env.DATABASE_URL) {
+  console.log("Configured DATABASE_URL from ENV file");
+  DATABASE_URL = process.env.DATABASE_URL;
+} else {
+  console.log("DATABASE_URL not found, missing env?");
+}
 
 //Connect To DB
 mongoose.connect(

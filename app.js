@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use("/api", routes);
 
 //Setup config
-let port, url;
+let port, DATABASE_URL;
 dotenv.config();
 
 if (process.env.PORT) {

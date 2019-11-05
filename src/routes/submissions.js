@@ -32,15 +32,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-// var Submission = db.model("Submission", schema);
-
-// This cat has no name :(
-// var submission = new Submission();
-// submission.save(function(error) {
-//   assert.equal(error.errors["email"].message, "Path `email` is required.");
-
-//   error = cat.validateSync();
-//   assert.equal(error.errors["email"].message, "Path `email` is required.");
-// });
-
 module.exports = router;

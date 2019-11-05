@@ -24,13 +24,15 @@ if (process.env.PORT) {
   port = 3000;
 }
 
-process.env.URL
-  ? (url = process.env.URL)
-  : console.log("URL not found, missing env?");
+process.env.DATABASE_URL
+  ? (DATABASE_URL = process.env.DATABASE_URL)
+  : console.log("DATABASE_URL not found, missing env?");
 
 //Connect To DB
-mongoose.connect(url, { useUnifiedTopology: true, useNewUrlParser: true }, () =>
-  console.log("Connected to database")
+mongoose.connect(
+  DATABASE_URL,
+  { useUnifiedTopology: true, useNewUrlParser: true },
+  () => console.log("Connected to database")
 );
 
 app.listen(port, () =>

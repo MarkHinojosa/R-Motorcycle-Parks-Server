@@ -11,6 +11,11 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/api", routes);
+app.get("/", function(req, res) {
+  res.send(
+    "Welcome to the Node server for my Motorcycle Maps Project. The client is located at: https://motorcycle-parks.herokuapp.com/ or my github:https://github.com/MarkHinojosa "
+  );
+});
 
 //Setup config
 let port, DATABASE_URL;
